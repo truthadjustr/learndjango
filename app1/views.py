@@ -6,7 +6,7 @@ import datetime
 # Create your views here.
 def main(request):
     #today = datetime.datetime.now().date()
-    today = str(datetime.datetime.now())
+    today = datetime.datetime.now()
     return render(request,"main.html",{"today":today})
 
 def hello(request,param):
