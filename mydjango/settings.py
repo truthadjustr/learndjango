@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    
+    # commenting out 'app1' from the list does not cause any error
+    # it only remove the app from admin console
     'app1',
 ]
 
