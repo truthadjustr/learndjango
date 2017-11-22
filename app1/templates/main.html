@@ -1,6 +1,10 @@
+{% extends "main_template.html" %}
 {% load myfilters %}
+{% block title %}Understanding Django{% endblock %}
 
-<h1>Welcome to Django</h1>
+{% block content %}
+
+<h2>Welcome to Django</h2>
 <hr>
 <p>Today {{today}} {{today.second}}s</p>
 {% if today.minute|mymodulo:2 %}
@@ -8,3 +12,5 @@
 {% else %}
 <input type="text" name="firstname">
 {% endif %}
+
+{% endblock %}
