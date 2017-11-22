@@ -4,3 +4,7 @@ from django.db import models
 class Item(models.Model):
     name = models.CharField(max_length = 30,blank = True,default = '')
     desc = models.TextField()
+   
+    # if we want to specifically named the table for this model
+    class Meta:
+        db_table = "item_table"
