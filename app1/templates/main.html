@@ -1,7 +1,9 @@
+{% load myfilters %}
+
 <h1>Welcome to Django</h1>
 <hr>
 <p>Today {{today}} {{today.second}}s</p>
-{% if today.minute|divisibleby:2 %}
+{% if today.minute|mymodulo:2 %}
 <button>click meh</button>
 {% else %}
 <input type="text" name="firstname">
