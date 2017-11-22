@@ -5,5 +5,5 @@ from django.http import HttpResponse
 def main(request):
     return render(request,"main.html",{})
 
-def hello(request):
-    return HttpResponse("<h2>hello</h2>")
+def hello(request,param):
+    return HttpResponse("<h2>hello %s</h2>" % ("stranger" if not param else param))
